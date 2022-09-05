@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import key from '../../Key'
 import { useEffect, useState } from 'react';
 import data from '../../data'
+import MainDisplay from '../MainDisplay/MainDisplay';
 
 function App() {
 
@@ -29,13 +30,13 @@ function App() {
   
 
 
-
-
   return (
     <div>
-      <Routes>
-
-      </Routes>
+      
+      <MainDisplay
+      data={data}
+      />
+      
     </div>
   );
 }
