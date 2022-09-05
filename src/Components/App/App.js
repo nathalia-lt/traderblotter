@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
+import key from '../../Key'
 
 function App() {
 
   let url = ''
 
   var myHeaders = new Headers();
-myHeaders.append("apikey", "cFuGGwn8ZP42lwL1hIujsq0Vbg9CR5fF");
+myHeaders.append("apikey", key);
 
 var requestOptions = {
   method: 'GET',
@@ -14,7 +14,7 @@ var requestOptions = {
   headers: myHeaders
 };
 
-fetch("https://api.apilayer.com/fixer/latest?symbols={symbols}&base={base}", requestOptions)
+fetch("https://api.apilayer.com/fixer/latest", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
