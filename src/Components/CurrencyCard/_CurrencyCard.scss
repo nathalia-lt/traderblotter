@@ -1,5 +1,7 @@
 @use '../../styles' as s;
 
+$cardHeight: 210px;
+
 .up{
     color: green;
 }
@@ -13,3 +15,81 @@
     color:navy;
     font-weight: 600;
 }
+
+.mainDisplayContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.currencyCard{
+    // background-color: orange;
+    // height: 210px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.currencyName{
+    background-color: palevioletred;
+    height: .2 * $cardHeight;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.bidAsk{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; // justify-self because there is no element in it (self)
+    width: 100%;
+    div{
+        margin-top: 2%;
+        margin-right: 2%;
+    }
+}
+
+.mainPrice{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.fluctuation{
+    
+}
+
+.currencyPrice{
+    background-color: plum;
+    height: .4 * $cardHeight;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.currencyFluctuation{
+    background-color: peachpuff;
+    height: .15 * $cardHeight;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+
+.side{
+    height: 100%;
+    width: 50%;
+    &.buy{
+        background-color: gainsboro;
+    }
+    &.sell{
+        background-color: cadetblue;
+    }
+
+}
+

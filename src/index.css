@@ -45,54 +45,6 @@
     transform: rotate(360deg);
   }
 }
-.mainDisplayContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.currencyCard {
-  background-color: orange;
-  height: 250px;
-  width: 450px;
-  display: flex;
-  flex-direction: column;
-}
-
-.currencyName {
-  background-color: palevioletred;
-  height: 20%;
-}
-
-.currencyPrice {
-  background-color: plum;
-  height: 60%;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-}
-
-.currencyFluctuation {
-  background-color: peachpuff;
-  height: 20%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.side {
-  height: 100%;
-  width: 50%;
-}
-.side.buy {
-  background-color: gainsboro;
-}
-.side.sell {
-  background-color: cadetblue;
-}
-
 .up {
   color: green;
 }
@@ -105,4 +57,72 @@
   font-size: 45px;
   color: navy;
   font-weight: 600;
+}
+
+.mainDisplayContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.currencyCard {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.currencyName {
+  background-color: palevioletred;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.bidAsk {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+.bidAsk div {
+  margin-top: 2%;
+  margin-right: 2%;
+}
+
+.mainPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.currencyPrice {
+  background-color: plum;
+  height: 84px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.currencyFluctuation {
+  background-color: peachpuff;
+  height: 31.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.side {
+  height: 100%;
+  width: 50%;
+}
+.side.buy {
+  background-color: gainsboro;
+}
+.side.sell {
+  background-color: cadetblue;
 }/*# sourceMappingURL=index.css.map */

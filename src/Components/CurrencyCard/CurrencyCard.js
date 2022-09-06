@@ -30,7 +30,7 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory }) {
 
     if (price > 1) {
         preDecimals = splitDecimals[0]
-        decimalLocation = -3 + preDecimals.length 
+        decimalLocation = -3 + preDecimals.length
     } else { // if the number is less than 1, we need to find out how many zeros come after the decimal point
         preDecimals = splitDecimals[1]
         for (let char of preDecimals) {
@@ -44,24 +44,24 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory }) {
     }
 
     // multiply by the sign variable we made above to determine if the buy or sell price will be higher
-    let [diff, setDiff] = useState(sign * Math.random() * (10 ** decimalLocation) / 2)
+    let [diff, setDiff] = useState((sign * Math.random() * (10 ** decimalLocation) / 2))
     let buyPrice = (price + diff).toString().slice(0, priceLength)
     let sellPrice = (price - diff).toString().slice(0, priceLength)
 
-    let buyPriceStart = buyPrice.slice(0, 4+count)
-    let buyPriceMiddle = buyPrice.slice(4+count, 6+count)
-    let buyPriceEnd = buyPrice.slice(6+count,)
+    let buyPriceStart = buyPrice.slice(0, 4 + count)
+    let buyPriceMiddle = buyPrice.slice(4 + count, 6 + count)
+    let buyPriceEnd = buyPrice.slice(6 + count,)
 
-    let sellPriceStart = sellPrice.slice(0+count, 4+count)
-    let sellPriceMiddle = sellPrice.slice(4+count, 6+count)
-    let sellPriceEnd = sellPrice.slice(6+count,)
+    let sellPriceStart = sellPrice.slice(0 + count, 4 + count)
+    let sellPriceMiddle = sellPrice.slice(4 + count, 6 + count)
+    let sellPriceEnd = sellPrice.slice(6 + count,)
 
     // add the numbers to our buy and sell history to calculate the min/max and arrow direction
     buyHistory.push(buyPrice)
     sellHistory.push(sellPrice)
 
-    let max = Math.max(...buyHistory,...sellHistory)
-    let min = Math.min(...buyHistory,...sellHistory)
+    let max = Math.max(...buyHistory, ...sellHistory)
+    let min = Math.min(...buyHistory, ...sellHistory)
 
 
     // we need a variable to determine wether or not the latest buy/sell price is increasing/decreasing compared to the previous price
@@ -99,16 +99,46 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory }) {
 
     }, [])
 
+    function truncateDecimals(num, digits) {
+        let numS = num.toString(),
+            decPos = numS.indexOf('.'),
+            substrLength = decPos == -1 ? numS.length : 1 + decPos + digits,
+            trimmedResult = numS.substr(0, substrLength),
+            finalResult = isNaN(trimmedResult) ? 0 : trimmedResult;
+
+        return parseFloat(finalResult);
+    }
+
+
+    let spread = (diff) / ((Number(buyPrice) + Number(sellPrice))/2) * 100
+    let roundedSpread = truncateDecimals(spread,2)
+
+    let spreadSign = roundedSpread >= 0 ? '+ ' : ''
+    let spreadClass = roundedSpread >= 0 ? 'up' : 'down'
+
     return (
         <div className='currencyCard' >
-            <div className='currencyName'> {symbol}</div>
+            <div className='currencyName'>
+                <div> USD{symbol} </div>
+            </div>
             <div className='currencyPrice'>
-                <div className='buy side' > <span className={displayBuyArrowClass}>{displayBuyArrow} </span> {buyPriceStart}<span className="targetNumbers">{buyPriceMiddle}</span>{buyPriceEnd} </div>
-                <div className='sell side' > <span className={displaySellArrowClass}>{displaySellArrow}</span> {sellPriceStart}<span className="targetNumbers">{sellPriceMiddle}</span>{sellPriceEnd} </div>
+                <div className='buy side' >
+                    <div className='bidAsk' > <div>BID</div> </div>
+                    <div className='mainPrice' >
+                    <div><span className={displayBuyArrowClass}>{displayBuyArrow} </span> {buyPriceStart}<span className="targetNumbers">{buyPriceMiddle}</span>{buyPriceEnd}</div>
+                    </div>
+                </div>
+                <div className='sell side' >  
+                <div className='bidAsk' >  <div>ASK</div>  </div>
+                <div className='mainPrice' >
+                <div> <span className={displaySellArrowClass}>{displaySellArrow}</span> {sellPriceStart}<span className="targetNumbers">{sellPriceMiddle}</span>{sellPriceEnd} </div>
+                </div>
+                </div>
             </div>
 
             <div className='currencyFluctuation'>
                 <div className='fluctuation'> H: {max} </div>
+                <div className={spreadClass}> {spreadSign}{roundedSpread}</div>
                 <div className='fluctuation'> L: {min} </div>
             </div>
 
