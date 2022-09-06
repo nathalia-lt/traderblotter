@@ -63,10 +63,7 @@ let data = {
             "symbol": "BHD",
             "price": 0.376969
         },
-        {
-            "symbol": "BIF",
-            "price": 2047
-        },
+
         {
             "symbol": "BND",
             "price": 1.404182
@@ -94,10 +91,6 @@ let data = {
         {
             "symbol": "BYN",
             "price": 2.524702
-        },
-        {
-            "symbol": "BYR",
-            "price": 19600
         },
         {
             "symbol": "BZD",
@@ -136,14 +129,6 @@ let data = {
             "price": 658.734233
         },
         {
-            "symbol": "CUC",
-            "price": 1
-        },
-        {
-            "symbol": "CUP",
-            "price": 26.5
-        },
-        {
             "symbol": "CVE",
             "price": 111.499041
         },
@@ -170,10 +155,6 @@ let data = {
         {
             "symbol": "EGP",
             "price": 19.235498
-        },
-        {
-            "symbol": "ERN",
-            "price": 15
         },
         {
             "symbol": "ETB",
@@ -262,10 +243,6 @@ let data = {
         {
             "symbol": "INR",
             "price": 79.776803
-        },
-        {
-            "symbol": "IQD",
-            "price": 1460
         },
         {
             "symbol": "IRR",
@@ -488,10 +465,6 @@ let data = {
             "price": 61.397226
         },
         {
-            "symbol": "RWF",
-            "price": 1040
-        },
-        {
             "symbol": "SAR",
             "price": 3.759189
         },
@@ -556,10 +529,6 @@ let data = {
             "price": 10.125026
         },
         {
-            "symbol": "TMT",
-            "price": 3.5
-        },
-        {
             "symbol": "TND",
             "price": 3.213994
         },
@@ -590,10 +559,6 @@ let data = {
         {
             "symbol": "UGX",
             "price": 3826.957922
-        },
-        {
-            "symbol": "USD",
-            "price": 1
         },
         {
             "symbol": "UYU",
