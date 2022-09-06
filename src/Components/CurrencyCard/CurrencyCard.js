@@ -165,9 +165,9 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory, transa
             </div>
 
             <div className='currencyFluctuation'>
-                <div className='fluctuation'> H: {max} </div>
+                <div className='fluctuation max'> H: {max} </div>
                 <div className={spreadClass}> {spreadSign}{roundedSpread}</div>
-                <div className='fluctuation'> L: {min} </div>
+                <div className='fluctuation min'> L: {min} </div>
             </div>
 
         </div>

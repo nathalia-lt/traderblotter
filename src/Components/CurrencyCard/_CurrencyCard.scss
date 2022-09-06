@@ -12,7 +12,7 @@ $cardHeight: 210px;
 
 .targetNumbers{
     font-size: 45px;
-    color:navy;
+    color:white;
     font-weight: 600;
 }
 
@@ -25,8 +25,6 @@ $cardHeight: 210px;
 }
 
 .currencyCard{
-    // background-color: orange;
-    // height: 210px;
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -34,12 +32,15 @@ $cardHeight: 210px;
 }
 
 .currencyName{
-    background-color: palevioletred;
+    background-color: s.$secondary;
+    color: s.$text;
     height: .2 * $cardHeight;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    border-top-left-radius: s.$radius;
+    border-top-right-radius: s.$radius;
 }
 
 .bidAsk{
@@ -60,11 +61,17 @@ $cardHeight: 210px;
 }
 
 .fluctuation{
-    
+    &.max{
+        margin-left: 2%;
+    }
+    &.min{
+        margin-right: 2%;
+    }
 }
 
 .currencyPrice{
-    background-color: plum;
+    background-color: s.$secondary;
+    color: s.$text;
     height: .4 * $cardHeight;
     display: flex;
     flex-direction: row;
@@ -72,23 +79,36 @@ $cardHeight: 210px;
 }
 
 .currencyFluctuation{
-    background-color: peachpuff;
+    background-color: s.$secondary;
+    color: s.$text;
     height: .15 * $cardHeight;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    border-bottom-left-radius: s.$radius;
+    border-bottom-right-radius: s.$radius;
     
 }
 
 .side{
     height: 100%;
     width: 50%;
+    background-color: s.$primary;
+    border: 1px solid lightgray;
+
+    &:hover{
+        cursor: pointer;
+        background-color: rgb(158, 155, 155);
+    }
+    &:active{
+        background-color: rgb(88, 82, 82);
+    }
+
     &.buy{
-        background-color: gainsboro;
     }
     &.sell{
-        background-color: cadetblue;
+
     }
 
 }

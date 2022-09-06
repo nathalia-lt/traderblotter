@@ -55,7 +55,7 @@
 
 .targetNumbers {
   font-size: 45px;
-  color: navy;
+  color: white;
   font-weight: 600;
 }
 
@@ -74,12 +74,15 @@
 }
 
 .currencyName {
-  background-color: palevioletred;
+  background-color: black;
+  color: white;
   height: 42px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
 }
 
 .bidAsk {
@@ -99,8 +102,16 @@
   justify-content: center;
 }
 
+.fluctuation.max {
+  margin-left: 2%;
+}
+.fluctuation.min {
+  margin-right: 2%;
+}
+
 .currencyPrice {
-  background-color: plum;
+  background-color: black;
+  color: white;
   height: 84px;
   display: flex;
   flex-direction: row;
@@ -108,21 +119,27 @@
 }
 
 .currencyFluctuation {
-  background-color: peachpuff;
+  background-color: black;
+  color: white;
   height: 31.5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 .side {
   height: 100%;
   width: 50%;
+  background-color: gray;
+  border: 1px solid lightgray;
 }
-.side.buy {
-  background-color: gainsboro;
+.side:hover {
+  cursor: pointer;
+  background-color: rgb(158, 155, 155);
 }
-.side.sell {
-  background-color: cadetblue;
+.side:active {
+  background-color: rgb(88, 82, 82);
 }/*# sourceMappingURL=index.css.map */
