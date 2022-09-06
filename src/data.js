@@ -68,10 +68,6 @@ let data = {
             "price": 2047
         },
         {
-            "symbol": "BMD",
-            "price": 1
-        },
-        {
             "symbol": "BND",
             "price": 1.404182
         },
@@ -86,10 +82,6 @@ let data = {
         {
             "symbol": "BSD",
             "price": 1.00001
-        },
-        {
-            "symbol": "BTC",
-            "price": 0.000050442348
         },
         {
             "symbol": "BTN",

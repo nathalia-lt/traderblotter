@@ -1,1 +1,15 @@
 @use '../../styles' as s;
+
+.up{
+    color: green;
+}
+
+.down{
+    color:red;
+}
+
+.targetNumbers{
+    font-size: 45px;
+    color:navy;
+    font-weight: 600;
+}

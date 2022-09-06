@@ -91,4 +91,18 @@
 }
 .side.sell {
   background-color: cadetblue;
+}
+
+.up {
+  color: green;
+}
+
+.down {
+  color: red;
+}
+
+.targetNumbers {
+  font-size: 45px;
+  color: navy;
+  font-weight: 600;
 }/*# sourceMappingURL=index.css.map */
