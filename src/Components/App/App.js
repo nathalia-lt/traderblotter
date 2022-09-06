@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import data from '../../data'
 import MainDisplay from '../MainDisplay/MainDisplay';
 
+
 function App() {
 
 
@@ -29,12 +30,15 @@ function App() {
 // },[])
   
 
+  let [transactions, setTransactions] = useState([])
 
   return (
     <div>
       
       <MainDisplay
       data={data}
+      transactions={transactions}
+      setTransactions={setTransactions}
       />
       
     </div>

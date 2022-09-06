@@ -2,7 +2,7 @@ import CurrencyCard from "../CurrencyCard/CurrencyCard"
 
 
 
-export default function MainDisplay({ data }) {
+export default function MainDisplay({ data, transactions, setTransactions }) {
 
     let first = data.rates[2]
     
@@ -16,6 +16,8 @@ export default function MainDisplay({ data }) {
                 currency={first}
                 buyHistory={[]}
                 sellHistory={[]}
+                transactions={transactions}
+                setTransactions={setTransactions}
             />
         </div>
     )

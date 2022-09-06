@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-export default function CurrencyCard({ currency, buyHistory, sellHistory }) {
+export default function CurrencyCard({ currency, buyHistory, sellHistory, transactions, setTransactions }) {
 
     let symbol = currency.symbol
 
@@ -116,19 +116,47 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory }) {
     let spreadSign = roundedSpread >= 0 ? '+ ' : ''
     let spreadClass = roundedSpread >= 0 ? 'up' : 'down'
 
+
+    function handleConfirmBuy(){
+        let newTx = {
+            id: transactions.length+1,
+            currency: 'USD'+ symbol, 
+            price: buyPrice,
+            status: 'DONE',
+            side: 'BUY'
+        }
+        let updatedTransactions = [...transactions, newTx]
+        setTransactions(updatedTransactions)
+    }
+
+    function handleConfirmSell(){
+        let newTx = {
+            id: transactions.length+1,
+            currency: 'USD'+ symbol, 
+            price: sellPrice,
+            status: 'DONE',
+            side: 'SELL'
+        }
+        let updatedTransactions = [...transactions, newTx]
+        setTransactions(updatedTransactions)
+    }
+
+
+
+
     return (
         <div className='currencyCard' >
             <div className='currencyName'>
                 <div> USD{symbol} </div>
             </div>
             <div className='currencyPrice'>
-                <div className='buy side' >
+                <div className='buy side' onClick={handleConfirmBuy} >
                     <div className='bidAsk' > <div>BID</div> </div>
                     <div className='mainPrice' >
                     <div><span className={displayBuyArrowClass}>{displayBuyArrow} </span> {buyPriceStart}<span className="targetNumbers">{buyPriceMiddle}</span>{buyPriceEnd}</div>
                     </div>
                 </div>
-                <div className='sell side' >  
+                <div className='sell side' onClick={handleConfirmSell} >  
                 <div className='bidAsk' >  <div>ASK</div>  </div>
                 <div className='mainPrice' >
                 <div> <span className={displaySellArrowClass}>{displaySellArrow}</span> {sellPriceStart}<span className="targetNumbers">{sellPriceMiddle}</span>{sellPriceEnd} </div>
