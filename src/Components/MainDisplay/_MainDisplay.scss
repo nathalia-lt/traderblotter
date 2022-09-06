@@ -32,6 +32,9 @@
 .currencyFluctuation{
     background-color: peachpuff;
     height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     
 }
 
