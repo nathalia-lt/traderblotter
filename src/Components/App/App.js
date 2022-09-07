@@ -33,13 +33,14 @@ function App() {
   let [transactions, setTransactions] = useState([])
 
   return (
-    <div>
-
-      <MainDisplay
-        data={data}
-        transactions={transactions}
-        setTransactions={setTransactions}
-      />
+    <div className='app'>
+      <div className='allCurrencies' >
+        <MainDisplay
+          data={data}
+          transactions={transactions}
+          setTransactions={setTransactions}
+        />
+      </div>
       <div className='transactions' >
         <table>
           <thead>

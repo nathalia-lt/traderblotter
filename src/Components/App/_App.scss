@@ -1,5 +1,8 @@
 @use '../../styles' as s;
 
+.app{
+  height:100vh;
+}
 
 .transactions{
   display: flex;
@@ -27,5 +30,11 @@
       background-color: lightblue;
     }
   }
+}
+
+.allCurrencies{
+  height: 80%;
+  background-color: red;
+  overflow-y: scroll;
 }
 
