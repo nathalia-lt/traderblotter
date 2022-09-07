@@ -123,7 +123,8 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory, transa
             currency: 'USD'+ symbol, 
             price: buyPrice,
             status: 'DONE',
-            side: 'BUY'
+            side: 'BUY',
+            date: new Date().toLocaleString()
         }
         let updatedTransactions = [...transactions, newTx]
         setTransactions(updatedTransactions)
@@ -135,7 +136,9 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory, transa
             currency: 'USD'+ symbol, 
             price: sellPrice,
             status: 'DONE',
-            side: 'SELL'
+            side: 'SELL',
+            date: new Date().toLocaleString()
+
         }
         let updatedTransactions = [...transactions, newTx]
         setTransactions(updatedTransactions)

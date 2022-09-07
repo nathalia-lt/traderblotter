@@ -8,8 +8,6 @@ import MainDisplay from '../MainDisplay/MainDisplay';
 function App() {
 
 
-
-
   //   let url = "https://api.apilayer.com/fixer/latest?base=usd"
 
   //   let [data, setData] = useState([])
@@ -31,6 +29,19 @@ function App() {
 
 
   let [transactions, setTransactions] = useState([])
+
+
+  let transactionsToDisplay = transactions.sort((tx1, tx2) => tx2.id - tx1.id ).map(transaction => {
+    return (
+      <tr>
+        <td>{transaction.currency}</td>
+        <td>{transaction.price}</td>
+        <td>{transaction.status}</td>
+        <td>{transaction.side}</td>
+        <td>{transaction.date}</td>
+      </tr>
+    )
+  })
 
   return (
     <div className='app'>
@@ -54,13 +65,7 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>EURUSD</td>
-              <td>1.50679</td>
-              <td>Done</td>
-              <td>Buy</td>
-              <td>09.07.22</td>
-            </tr>
+            {transactionsToDisplay}
           </tbody>
         </table>
       </div>
