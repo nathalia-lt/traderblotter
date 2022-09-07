@@ -1,14 +1,22 @@
 @use '../../styles'as s;
 
-.transactions {
+.txDisplay{
+    background-color: red;
+}
+
+.tableHeader {
+    background-color: red;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
 
     table {
-        background-color: pink;
+        background-color:transparent;
         border: 1px solid gray;
-        border-collapse: collapse;
+        border: none !important;
+        border-spacing: 0px;
+        width: 74.25%;
     }
 
     thead {
@@ -18,14 +26,57 @@
     th {
         border: 1px solid gray;
         padding: 10px;
+        // border-top: 5px solid red;
+    }
+    th:nth-of-type(1){
+        width:181px;
+        border-top-left-radius: s.$radius;
+    }
+    th:nth-of-type(2){
+        width:197px;
+    }
+    th:nth-of-type(3){
+        width:127px;
+    }
+    th:nth-of-type(4){
+        width:112px;
+    }
+    th:nth-of-type(5){
+        border-top-right-radius: s.$radius;
+    }
+}
+
+.transactions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 20%;
+    overflow-y: scroll;
+
+    table {
+        background-color: pink;
+        border: 1px solid gray;
+        border-collapse: collapse;
+        width: 74.25%;
+        height: 30%;
+    }
+
+    tr{
+        height: 20.5px;
+        max-height: 20.5px;
     }
 
     td {
         border: 1px solid gray;
         padding: 10px;
+        min-height: 20.5px;
+        max-height: 20.5px;
     }
 
     tbody {
+
+        // height: 50%;
+        // overflow-y: scroll; //when there is more content that are going to overflow the height it will scroll through
         tr:hover {
             background-color: lightblue;
         }

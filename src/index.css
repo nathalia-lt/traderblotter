@@ -5,7 +5,7 @@
 }
 
 .allCurrencies {
-  height: 80%;
+  height: 85%;
   background-color: red;
   overflow-y: scroll;
   display: flex;
@@ -29,6 +29,11 @@
 
 .down {
   color: red;
+}
+
+.arrow {
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .targetNumbers {
@@ -115,26 +120,70 @@
 .side:active {
   background-color: rgb(88, 82, 82);
 }
+.txDisplay {
+  background-color: red;
+}
+
+.tableHeader {
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.tableHeader table {
+  background-color: transparent;
+  border: 1px solid gray;
+  border: none !important;
+  border-spacing: 0px;
+  width: 74.25%;
+}
+.tableHeader thead {
+  background-color: gainsboro;
+}
+.tableHeader th {
+  border: 1px solid gray;
+  padding: 10px;
+}
+.tableHeader th:nth-of-type(1) {
+  width: 181px;
+  border-top-left-radius: 7px;
+}
+.tableHeader th:nth-of-type(2) {
+  width: 197px;
+}
+.tableHeader th:nth-of-type(3) {
+  width: 127px;
+}
+.tableHeader th:nth-of-type(4) {
+  width: 112px;
+}
+.tableHeader th:nth-of-type(5) {
+  border-top-right-radius: 7px;
+}
+
 .transactions {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 20%;
+  overflow-y: scroll;
 }
 .transactions table {
   background-color: pink;
   border: 1px solid gray;
   border-collapse: collapse;
+  width: 74.25%;
+  height: 30%;
 }
-.transactions thead {
-  background-color: gainsboro;
-}
-.transactions th {
-  border: 1px solid gray;
-  padding: 10px;
+.transactions tr {
+  height: 20.5px;
+  max-height: 20.5px;
 }
 .transactions td {
   border: 1px solid gray;
   padding: 10px;
+  min-height: 20.5px;
+  max-height: 20.5px;
 }
 .transactions tbody tr:hover {
   background-color: lightblue;

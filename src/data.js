@@ -101,10 +101,6 @@ let data = {
             "price": 1.31415
         },
         {
-            "symbol": "CDF",
-            "price": 2024.999728
-        },
-        {
             "symbol": "CHF",
             "price": 0.98046
         },
@@ -119,10 +115,6 @@ let data = {
         {
             "symbol": "CNY",
             "price": 6.933983
-        },
-        {
-            "symbol": "COP",
-            "price": 4463.33
         },
         {
             "symbol": "CRC",
@@ -195,10 +187,6 @@ let data = {
         {
             "symbol": "GMD",
             "price": 55.150314
-        },
-        {
-            "symbol": "GNF",
-            "price": 8754.999759
         },
         {
             "symbol": "GTQ",

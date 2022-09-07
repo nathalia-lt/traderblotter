@@ -1,6 +1,6 @@
 
 
-export default function Transactions( {transactions} ) {
+export default function Transactions({ transactions }) {
 
     let transactionsToDisplay = transactions.sort((tx1, tx2) => tx2.id - tx1.id).map(transaction => {
         return (
@@ -16,22 +16,27 @@ export default function Transactions( {transactions} ) {
 
 
     return (
-        <div className='transactions' >
-            <table>
-                <thead>
-
-                    <tr>
-                        <th>Currency</th>
-                        <th>Price</th>
-                        <th>Status</th>
-                        <th>Side</th>
-                        <th>Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {transactionsToDisplay}
-                </tbody>
-            </table>
-        </div>
+        <>
+            <div className="tableHeader">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>CCY</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Side</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div className='transactions' >
+                <table>
+                    <tbody>
+                        {transactionsToDisplay}
+                    </tbody>
+                </table>
+            </div>
+        </>
     )
 }
