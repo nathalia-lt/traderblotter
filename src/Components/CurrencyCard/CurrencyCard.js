@@ -74,7 +74,7 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory, transa
     let displaySellArrow = sellArrowIncreasing ? '↑' : '↓'
     let displaySellArrowClass = sellArrowIncreasing ? 'up' : 'down'
 
-    useEffect(() => {
+    useEffect(() => { //useEffect allows us run just once when we start up the page
         // this interval inside of the useEffect will run every 2.5 seconds and will calculate a new randomized difference for the prices
         setInterval(() => {
             let newDiff = sign * Math.random() * (10 ** decimalLocation) / 2
