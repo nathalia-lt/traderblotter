@@ -4,7 +4,10 @@ import { useEffect, useState } from 'react';
 import data from '../../data'
 import MainDisplay from '../MainDisplay/MainDisplay';
 import Transactions from '../Transactions/Transactions';
-
+import github from '../../Images/github.png'
+import linkedin from '../../Images/linkedin.png'
+import Toggle from 'react-toggle';
+import "react-toggle/style.css"
 
 function App() {
 
@@ -31,19 +34,55 @@ function App() {
 
   let [transactions, setTransactions] = useState([])
 
+  function handleGitHubClick() {
+    window.open('https://github.com/nathalia-lt/traderblotter')
+  }
 
-  
+  function handleLinkedinClick() {
+    window.open('https://www.linkedin.com/in/nathaliatroina/')
+  }
+
+  let [lightModeOn, setLightModeOn] = useState(false)
+
+  function handleToggleChange(){
+    setLightModeOn(!lightModeOn)
+  }
+
+  let toggleText = (lightModeOn ? 'light':'')
+
+  let appClass = 'app ' + toggleText
+
+  let toggleClass = 'toggle ' + toggleText
+
   return (
-    <div className='app'>
-      <div className='allCurrencies' >
+    <div className={appClass}>
+      <div className='headerContainer' >
+        <Toggle
+          defaultChecked={!lightModeOn}
+          icons={false}
+          className={toggleClass}
+          onChange={handleToggleChange} />
+          <div className='title' >
+        <h1>Trader Blotter </h1>
+        <img src="https://img.icons8.com/ios/500/000000/graph--v1.png" alt=''/>
+          </div>
+        <div className='icons' >
+          <img className={toggleText} src={github} onClick={handleGitHubClick} alt=''/>
+          <img className={toggleText} src={linkedin} onClick={handleLinkedinClick} alt='' />
+        </div>
+      </div>
+      <div className={'allCurrencies ' + toggleText} >
         <MainDisplay
           data={data}
           transactions={transactions}
           setTransactions={setTransactions}
+          toggleText={toggleText}
         />
       </div>
       <Transactions
-      transactions={transactions}
+        transactions={transactions}
+        toggleText={toggleText}
+
       />
     </div>
   );

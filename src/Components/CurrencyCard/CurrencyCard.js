@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-export default function CurrencyCard({ currency, buyHistory, sellHistory, transactions, setTransactions }) {
+export default function CurrencyCard({ currency, buyHistory, sellHistory, transactions, setTransactions, toggleText }) {
 
     let symbol = currency.symbol
 
@@ -70,9 +70,9 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory, transa
 
     // ternaries to change what is being displayed
     let displayBuyArrow = buyArrowIncreasing ? '↑' : '↓'
-    let displayBuyArrowClass = buyArrowIncreasing ? 'arrow up' : 'arrow down'
+    let displayBuyArrowClass = (buyArrowIncreasing ? 'arrow up ' : 'arrow down ') + toggleText
     let displaySellArrow = sellArrowIncreasing ? '↑' : '↓'
-    let displaySellArrowClass = sellArrowIncreasing ? 'arrow up' : 'arrow down'
+    let displaySellArrowClass = (sellArrowIncreasing ? 'arrow up ' : 'arrow down ') + toggleText
 
     useEffect(() => { //useEffect allows us run just once when we start up the page
         // this interval inside of the useEffect will run every 2.5 seconds and will calculate a new randomized difference for the prices
@@ -110,17 +110,17 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory, transa
     }
 
 
-    let spread = (diff) / ((Number(buyPrice) + Number(sellPrice))/2) * 100
-    let roundedSpread = truncateDecimals(spread,2)
+    let spread = (diff) / ((Number(buyPrice) + Number(sellPrice)) / 2) * 100
+    let roundedSpread = truncateDecimals(spread, 2)
 
     let spreadSign = roundedSpread >= 0 ? '+ ' : ''
-    let spreadClass = roundedSpread >= 0 ? 'up' : 'down'
+    let spreadClass = (roundedSpread >= 0 ? 'up ' : 'down ') + toggleText
 
 
-    function handleConfirmBuy(){
+    function handleConfirmBuy() {
         let newTx = {
-            id: transactions.length+1,
-            currency: 'USD'+ symbol, 
+            id: transactions.length + 1,
+            currency: 'USD' + symbol,
             price: buyPrice,
             status: 'DONE',
             side: 'BUY',
@@ -130,10 +130,10 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory, transa
         setTransactions(updatedTransactions)
     }
 
-    function handleConfirmSell(){
+    function handleConfirmSell() {
         let newTx = {
-            id: transactions.length+1,
-            currency: 'USD'+ symbol, 
+            id: transactions.length + 1,
+            currency: 'USD' + symbol,
             price: sellPrice,
             status: 'DONE',
             side: 'SELL',
@@ -156,14 +156,14 @@ export default function CurrencyCard({ currency, buyHistory, sellHistory, transa
                 <div className='buy side' onClick={handleConfirmBuy} >
                     <div className='bidAsk' > <div>BID</div> </div>
                     <div className='mainPrice' >
-                    <div><span className={displayBuyArrowClass}>{displayBuyArrow} </span> {buyPriceStart}<span className="targetNumbers">{buyPriceMiddle}</span>{buyPriceEnd}</div>
+                        <div><span className={displayBuyArrowClass}>{displayBuyArrow} </span> {buyPriceStart}<span className="targetNumbers">{buyPriceMiddle}</span>{buyPriceEnd}</div>
                     </div>
                 </div>
-                <div className='sell side' onClick={handleConfirmSell} >  
-                <div className='bidAsk' >  <div>ASK</div>  </div>
-                <div className='mainPrice' >
-                <div> <span className={displaySellArrowClass}>{displaySellArrow}</span> {sellPriceStart}<span className="targetNumbers">{sellPriceMiddle}</span>{sellPriceEnd} </div>
-                </div>
+                <div className='sell side' onClick={handleConfirmSell} >
+                    <div className='bidAsk' >  <div>ASK</div>  </div>
+                    <div className='mainPrice' >
+                        <div> <span className={displaySellArrowClass}>{displaySellArrow}</span> {sellPriceStart}<span className="targetNumbers">{sellPriceMiddle}</span>{sellPriceEnd} </div>
+                    </div>
                 </div>
             </div>
 

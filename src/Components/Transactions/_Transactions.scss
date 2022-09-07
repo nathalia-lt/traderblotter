@@ -1,11 +1,11 @@
 @use '../../styles'as s;
 
 .txDisplay{
-    background-color: red;
+    background-color: s.$bg;
 }
 
 .tableHeader {
-    background-color: red;
+    background-color: s.$bg;
 
     display: flex;
     flex-direction: row;
@@ -20,13 +20,14 @@
     }
 
     thead {
-        background-color: gainsboro;
+        background-color: rgb(45, 42, 42);
+        color: white;
     }
 
     th {
         border: 1px solid gray;
         padding: 10px;
-        // border-top: 5px solid red;
+        border-top: 5px solid white;
     }
     th:nth-of-type(1){
         width:181px;
@@ -44,9 +45,16 @@
     th:nth-of-type(5){
         border-top-right-radius: s.$radius;
     }
+
+    &.light{
+        background-color: black;
+        filter: invert(0%) !important;
+    
+      }
 }
 
 .transactions {
+    background-color: s.$bg;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -54,7 +62,7 @@
     overflow-y: scroll;
 
     table {
-        background-color: pink;
+        background-color: rgb(166, 166, 166);
         border: 1px solid gray;
         border-collapse: collapse;
         width: 74.25%;
@@ -78,7 +86,13 @@
         // height: 50%;
         // overflow-y: scroll; //when there is more content that are going to overflow the height it will scroll through
         tr:hover {
-            background-color: lightblue;
+            background-color: whitesmoke;
         }
     }
+
+  &.light{
+    background-color: black;
+    filter: invert(0%) !important;
+
+  }
 }

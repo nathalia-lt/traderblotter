@@ -4,10 +4,16 @@ $cardHeight: 210px;
 
 .up{
     color: green;
+    &.light {
+        // filter: invert(100%) !important;
+    }
 }
 
 .down{
     color:red;
+    &.light {
+        // filter: invert(100%) !important;
+    }
 }
 
 .arrow{

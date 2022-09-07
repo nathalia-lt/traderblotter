@@ -1,18 +1,86 @@
-@use '../../styles' as s;
+@use '../../styles'as s;
 
-.app{
-  height:100vh;
+.app {
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+.light {
+  filter: invert(100%);
 
-.allCurrencies{
-  height: 85%;
-  background-color: red;
+    img {
+      filter: invert(100%) !important;
+    }
+}
+
+h1{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 35px;
+  
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+
+  img{
+    height: 35px;
+    margin-top: 10%;
+  }
+}
+
+
+.allCurrencies {
+  height: 61%;
+  background-color: s.$bg;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 1.5%;
+
+  &.light{
+    background-color: black;
+    filter: invert(0%) !important;
+
+  }
 }
 
+.toggle{
+  &.light{
+    filter: invert(100%) !important;
+  }
+}
+
+.toggle.react-toggle--checked .react-toggle-track {
+  background-color: white;
+}
+.toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: lightgoldenrodyellow;
+}
+
+.react-toggle--checked .react-toggle-thumb{
+  border-color: rgb(158, 157, 157) !important;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  align-items: center;
+  background-color: rgb(35, 35, 35);
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.icons {
+  img {
+    cursor: pointer;
+    height: 40px; //make icons smaller
+    // filter: invert(0%) !important;
+  }
+}

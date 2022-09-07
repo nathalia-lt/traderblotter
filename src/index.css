@@ -4,13 +4,73 @@
   flex-direction: column;
 }
 
+.light {
+  filter: invert(100%);
+}
+.light img {
+  filter: invert(100%) !important;
+}
+
+h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 35px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+.title img {
+  height: 35px;
+  margin-top: 10%;
+}
+
 .allCurrencies {
-  height: 85%;
-  background-color: red;
+  height: 61%;
+  background-color: rgb(92, 90, 90);
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 1.5%;
+}
+.allCurrencies.light {
+  background-color: black;
+  filter: invert(0%) !important;
+}
+
+.toggle.light {
+  filter: invert(100%) !important;
+}
+
+.toggle.react-toggle--checked .react-toggle-track {
+  background-color: white;
+}
+
+.toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: lightgoldenrodyellow;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  border-color: rgb(158, 157, 157) !important;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  align-items: center;
+  background-color: rgb(35, 35, 35);
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.icons img {
+  cursor: pointer;
+  height: 40px;
 }
 
 .mainDisplayContainer {
@@ -26,11 +86,9 @@
 .up {
   color: green;
 }
-
 .down {
   color: red;
 }
-
 .arrow {
   font-size: 25px;
   font-weight: 700;
@@ -51,7 +109,7 @@
 }
 
 .currencyName {
-  background-color: black;
+  background-color: rgb(45, 42, 42);
   color: white;
   height: 42px;
   display: flex;
@@ -87,7 +145,7 @@
 }
 
 .currencyPrice {
-  background-color: black;
+  background-color: rgb(45, 42, 42);
   color: white;
   height: 84px;
   display: flex;
@@ -96,7 +154,7 @@
 }
 
 .currencyFluctuation {
-  background-color: black;
+  background-color: rgb(45, 42, 42);
   color: white;
   height: 31.5px;
   display: flex;
@@ -121,11 +179,11 @@
   background-color: rgb(88, 82, 82);
 }
 .txDisplay {
-  background-color: red;
+  background-color: rgb(92, 90, 90);
 }
 
 .tableHeader {
-  background-color: red;
+  background-color: rgb(92, 90, 90);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -138,11 +196,13 @@
   width: 74.25%;
 }
 .tableHeader thead {
-  background-color: gainsboro;
+  background-color: rgb(45, 42, 42);
+  color: white;
 }
 .tableHeader th {
   border: 1px solid gray;
   padding: 10px;
+  border-top: 5px solid white;
 }
 .tableHeader th:nth-of-type(1) {
   width: 181px;
@@ -160,8 +220,13 @@
 .tableHeader th:nth-of-type(5) {
   border-top-right-radius: 7px;
 }
+.tableHeader.light {
+  background-color: black;
+  filter: invert(0%) !important;
+}
 
 .transactions {
+  background-color: rgb(92, 90, 90);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -169,7 +234,7 @@
   overflow-y: scroll;
 }
 .transactions table {
-  background-color: pink;
+  background-color: rgb(166, 166, 166);
   border: 1px solid gray;
   border-collapse: collapse;
   width: 74.25%;
@@ -186,5 +251,9 @@
   max-height: 20.5px;
 }
 .transactions tbody tr:hover {
-  background-color: lightblue;
+  background-color: whitesmoke;
+}
+.transactions.light {
+  background-color: black;
+  filter: invert(0%) !important;
 }/*# sourceMappingURL=index.css.map */

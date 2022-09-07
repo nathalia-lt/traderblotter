@@ -2,7 +2,7 @@ import CurrencyCard from "../CurrencyCard/CurrencyCard"
 
 
 
-export default function MainDisplay({ data, transactions, setTransactions }) {
+export default function MainDisplay({ data, transactions, setTransactions, toggleText }) {
 
     let first = data.rates[2]
 
@@ -15,6 +15,7 @@ export default function MainDisplay({ data, transactions, setTransactions }) {
                 sellHistory={[]}
                 transactions={transactions}
                 setTransactions={setTransactions}
+                toggleText={toggleText}
             />
         )
     })
