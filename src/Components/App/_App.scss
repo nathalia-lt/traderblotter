@@ -6,33 +6,6 @@
   flex-direction: column;
 }
 
-.transactions{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  table{
-    background-color: pink;
-    border: 1px solid gray;
-    border-collapse: collapse;
-  }
-  thead{
-    background-color: gainsboro;
-  }
-  th{
-    border: 1px solid gray;
-    padding: 10px;
-  }
-  td{
-    border: 1px solid gray;
-    padding: 10px;
-  }
-  tbody{
-    tr:hover{
-      background-color: lightblue;
-    }
-  }
-}
 
 .allCurrencies{
   height: 80%;

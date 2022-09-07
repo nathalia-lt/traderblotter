@@ -4,31 +4,6 @@
   flex-direction: column;
 }
 
-.transactions {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.transactions table {
-  background-color: pink;
-  border: 1px solid gray;
-  border-collapse: collapse;
-}
-.transactions thead {
-  background-color: gainsboro;
-}
-.transactions th {
-  border: 1px solid gray;
-  padding: 10px;
-}
-.transactions td {
-  border: 1px solid gray;
-  padding: 10px;
-}
-.transactions tbody tr:hover {
-  background-color: lightblue;
-}
-
 .allCurrencies {
   height: 80%;
   background-color: red;
@@ -139,4 +114,28 @@
 }
 .side:active {
   background-color: rgb(88, 82, 82);
+}
+.transactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.transactions table {
+  background-color: pink;
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+.transactions thead {
+  background-color: gainsboro;
+}
+.transactions th {
+  border: 1px solid gray;
+  padding: 10px;
+}
+.transactions td {
+  border: 1px solid gray;
+  padding: 10px;
+}
+.transactions tbody tr:hover {
+  background-color: lightblue;
 }/*# sourceMappingURL=index.css.map */
