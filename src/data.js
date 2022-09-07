@@ -569,10 +569,6 @@ let data = {
             "price": 10980.000024
         },
         {
-            "symbol": "VND",
-            "price": 23515
-        },
-        {
             "symbol": "VUV",
             "price": 116.056079
         },
@@ -587,10 +583,6 @@ let data = {
         {
             "symbol": "XAG",
             "price": 0.055106
-        },
-        {
-            "symbol": "XAU",
-            "price": 0.000584
         },
         {
             "symbol": "XCD",
@@ -615,10 +607,6 @@ let data = {
         {
             "symbol": "ZAR",
             "price": 17.13643
-        },
-        {
-            "symbol": "ZMK",
-            "price": 9001.196955
         },
         {
             "symbol": "ZMW",
