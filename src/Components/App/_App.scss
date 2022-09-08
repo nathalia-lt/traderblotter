@@ -51,7 +51,7 @@ h1 {
   display: flex;
   flex-direction: column;
   height:100vh;
-  width: 60%;
+  width: 70%;
 }
 
 .rightSide{
@@ -59,9 +59,13 @@ h1 {
   flex-direction: column;
   // align-items: center;
   justify-content: flex-start;
-  width: 40%; //we are using 40% of the right side
+  width: 30%; //we are using 40% of the right side
+  height: 65%;
 }
 
+.allNews{
+  overflow-y: scroll;
+}
 .newsTitle{
   background-color: lightcoral;
   font-size: 30px;

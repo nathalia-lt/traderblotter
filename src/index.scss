@@ -4,7 +4,4 @@
 @use './Components/Transactions/Transactions';
 @use './Components/Header/Header';
 
-
-body{
-
-}
+html, body {margin: 0; height: 100%; overflow: hidden}

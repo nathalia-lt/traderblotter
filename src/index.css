@@ -40,14 +40,19 @@ h1 {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 60%;
+  width: 70%;
 }
 
 .rightSide {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 40%;
+  width: 30%;
+  height: 65%;
+}
+
+.allNews {
+  overflow-y: scroll;
 }
 
 .newsTitle {
@@ -320,4 +325,10 @@ h1 {
 }
 .icons img.light {
   filter: invert(100%) !important;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }/*# sourceMappingURL=index.css.map */
