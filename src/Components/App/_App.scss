@@ -61,43 +61,10 @@ h1 {
   justify-content: flex-start;
   width: 30%; //we are using 40% of the right side
   height: 65%;
-}
 
-.allNews{
-  overflow-y: scroll;
-}
-.newsTitle{
-  background-color: lightcoral;
-  font-size: 30px;
-  border-bottom: 2px solid lightblue;
-  padding: 2%;
-  width: 96%;
-  text-align: center;
-  font-weight: 800;
-}
-
-.author{
-  font-family: 'Times New Roman', Times, serif;
-  color: rgb(31, 31, 144);
-  font-weight: 700;
-  margin-top: 2%;
-  margin-bottom: 1.5%;
-}
-
-.headline{
-  cursor: pointer;
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.13;
-  &:hover{
-    text-decoration: underline;
+  &.light{
+    filter: invert(100%) !important;
   }
 }
 
-.newsCard{
-  background-color: peachpuff;
-  padding: 3%;
-  border-top: 1px dotted black ;
-  border-bottom: 1px dotted black ;
-}
+

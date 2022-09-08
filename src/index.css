@@ -50,45 +50,8 @@ h1 {
   width: 30%;
   height: 65%;
 }
-
-.allNews {
-  overflow-y: scroll;
-}
-
-.newsTitle {
-  background-color: lightcoral;
-  font-size: 30px;
-  border-bottom: 2px solid lightblue;
-  padding: 2%;
-  width: 96%;
-  text-align: center;
-  font-weight: 800;
-}
-
-.author {
-  font-family: "Times New Roman", Times, serif;
-  color: rgb(31, 31, 144);
-  font-weight: 700;
-  margin-top: 2%;
-  margin-bottom: 1.5%;
-}
-
-.headline {
-  cursor: pointer;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.13;
-}
-.headline:hover {
-  text-decoration: underline;
-}
-
-.newsCard {
-  background-color: peachpuff;
-  padding: 3%;
-  border-top: 1px dotted black;
-  border-bottom: 1px dotted black;
+.rightSide.light {
+  filter: invert(100%) !important;
 }
 
 .mainDisplayContainer {
@@ -122,8 +85,8 @@ h1 {
   width: 350px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.3%;
-  margin-right: 0.3%;
+  margin-bottom: 0.5%;
+  margin-right: 0.5%;
 }
 
 .currencyName {
@@ -223,17 +186,17 @@ h1 {
   border-top: 5px solid white;
 }
 .tableHeader th:nth-of-type(1) {
-  width: 181px;
+  width: 122px;
   border-top-left-radius: 7px;
 }
 .tableHeader th:nth-of-type(2) {
-  width: 197px;
+  width: 132px;
 }
 .tableHeader th:nth-of-type(3) {
-  width: 127px;
+  width: 81.5px;
 }
 .tableHeader th:nth-of-type(4) {
-  width: 112px;
+  width: 72px;
 }
 .tableHeader th:nth-of-type(5) {
   border-top-right-radius: 7px;
@@ -325,6 +288,47 @@ h1 {
 }
 .icons img.light {
   filter: invert(100%) !important;
+}
+
+.allNews {
+  overflow-y: scroll;
+}
+
+.newsTitle {
+  background-color: rgba(91, 91, 91, 0.731);
+  font-size: 30px;
+  border-bottom: 2px solid black;
+  padding: 2%;
+  width: 96%;
+  text-align: center;
+  font-weight: 800;
+  color: white;
+}
+
+.author {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 900;
+  margin-top: 2%;
+  margin-bottom: 1.5%;
+}
+
+.headline {
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.13;
+}
+.headline:hover {
+  text-decoration: underline;
+}
+
+.newsCard {
+  padding: 3%;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+  background-color: rgb(166, 166, 166);
+  color: white;
 }
 
 html, body {

@@ -3,5 +3,6 @@
 @use './Components/CurrencyCard/CurrencyCard';
 @use './Components/Transactions/Transactions';
 @use './Components/Header/Header';
+@use './Components/News/News';
 
 html, body {margin: 0; height: 100%; overflow: hidden}

@@ -5,6 +5,7 @@ import data from '../../data'
 import MainDisplay from '../MainDisplay/MainDisplay';
 import Transactions from '../Transactions/Transactions';
 import Header from '../Header/Header';
+import News from '../News/News';
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
   let [transactions, setTransactions] = useState([])
 
 
-  let [lightModeOn, setLightModeOn] = useState(false)
+  let [lightModeOn, setLightModeOn] = useState(true)
 
   function handleToggleChange() {
     setLightModeOn(!lightModeOn)
@@ -63,19 +64,6 @@ function App() {
       .catch(err => console.error(err));
   }, [])
 
-  let newsToDisplay = news.articles ? news.articles.map(article => {
-    function handleHeadlineClick() {
-      window.open(article.link)
-    }
-    return(
-      <div className='newsCard'>
-              <div className='author'> {article.author} </div>
-              <div className='headline' onClick={handleHeadlineClick} > {article.title} </div>
-            </div>
-    )
-  }) : null
-
-
 
 
   return (
@@ -102,12 +90,10 @@ function App() {
 
           />
         </div>
-        <div className='rightSide' >
-          <div className='newsTitle' >Latest News</div>
-          <div className='allNews'>
-              {newsToDisplay}
-
-          </div>
+        <div className={'rightSide ' + toggleText} >
+          <News
+            news={news}
+          />
         </div>
       </div>
     </div>
