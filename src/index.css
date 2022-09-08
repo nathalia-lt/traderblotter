@@ -16,21 +16,6 @@ h1 {
   font-size: 35px;
 }
 
-.title {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  width: 25%;
-}
-.title img {
-  height: 35px;
-  margin-top: 7.5%;
-  margin-left: 5%;
-}
-.title img.light {
-  filter: invert(100%) !important;
-}
-
 .allCurrencies {
   height: 61%;
   background-color: rgb(92, 90, 90);
@@ -45,40 +30,60 @@ h1 {
   filter: invert(0%) !important;
 }
 
-.toggle.light {
-  filter: invert(100%) !important;
-}
-
-.toggle.react-toggle--checked .react-toggle-track {
-  background-color: white;
-}
-
-.toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-  background-color: lightgoldenrodyellow;
-}
-
-.react-toggle--checked .react-toggle-thumb {
-  border-color: rgb(158, 157, 157) !important;
-}
-
-.headerContainer {
+.home {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
-  align-items: center;
-  background-color: rgb(35, 35, 35);
-  color: white;
-  border-bottom: 2px solid white;
+  width: 100%;
 }
 
-.icons img {
-  cursor: pointer;
-  height: 40px;
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 60%;
 }
-.icons img.light {
-  filter: invert(100%) !important;
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 40%;
+}
+
+.newsTitle {
+  background-color: lightcoral;
+  font-size: 30px;
+  border-bottom: 2px solid lightblue;
+  padding: 2%;
+  width: 96%;
+  text-align: center;
+  font-weight: 800;
+}
+
+.author {
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(31, 31, 144);
+  font-weight: 700;
+  margin-top: 2%;
+  margin-bottom: 1.5%;
+}
+
+.headline {
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.13;
+}
+.headline:hover {
+  text-decoration: underline;
+}
+
+.newsCard {
+  background-color: peachpuff;
+  padding: 3%;
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
 }
 
 .mainDisplayContainer {
@@ -264,4 +269,55 @@ h1 {
 .transactions.light {
   background-color: black;
   filter: invert(0%) !important;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  width: 25%;
+}
+.title img {
+  height: 35px;
+  margin-top: 7.5%;
+  margin-left: 5%;
+}
+.title img.light {
+  filter: invert(100%) !important;
+}
+
+.toggle.light {
+  filter: invert(100%) !important;
+}
+
+.toggle.react-toggle--checked .react-toggle-track {
+  background-color: white;
+}
+
+.toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: lightgoldenrodyellow;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+  border-color: rgb(158, 157, 157) !important;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  align-items: center;
+  background-color: rgb(35, 35, 35);
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.icons img {
+  cursor: pointer;
+  height: 40px;
+}
+.icons img.light {
+  filter: invert(100%) !important;
 }/*# sourceMappingURL=index.css.map */

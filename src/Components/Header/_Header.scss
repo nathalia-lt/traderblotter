@@ -1,3 +1,61 @@
 @use '../../styles'as s;
 
 
+.title {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 25%;
+
+    img {
+        height: 35px;
+        margin-top: 7.5%;
+        margin-left: 5%;
+
+        &.light {
+            filter: invert(100%) !important;
+        }
+    }
+}
+
+.toggle {
+    &.light {
+        filter: invert(100%) !important;
+    }
+}
+
+.toggle.react-toggle--checked .react-toggle-track {
+    background-color: white;
+}
+
+.toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+    background-color: lightgoldenrodyellow;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+    border-color: rgb(158, 157, 157) !important;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+    align-items: center;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.icons {
+    img {
+        cursor: pointer;
+        height: 40px; //make icons smaller
+
+        &.light {
+
+            filter: invert(100%) !important;
+        }
+    }
+}
