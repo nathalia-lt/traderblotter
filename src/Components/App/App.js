@@ -46,6 +46,22 @@ function App() {
 
   let toggleClass = 'toggle ' + toggleText
 
+
+  let [news, setNews] = useState([])
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': key,
+      'X-RapidAPI-Host': 'newscatcher.p.rapidapi.com'
+    }
+  };
+  useEffect(() => {
+    fetch('https://newscatcher.p.rapidapi.com/v1/search_enterprise?q=Elon%20Musk&lang=en&sort_by=relevancy&page=1&media=True', options)
+      .then(response => response.json())
+      .then(response => setNews (response))
+      .catch(err => console.error(err));
+  },[])
   
 
 
