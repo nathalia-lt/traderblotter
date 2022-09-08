@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/traderblotter/static/css/main.c3201c72.css",
+    "main.js": "/traderblotter/static/js/main.afe6d4af.js",
+    "index.html": "/traderblotter/index.html",
+    "main.c3201c72.css.map": "/traderblotter/static/css/main.c3201c72.css.map",
+    "main.afe6d4af.js.map": "/traderblotter/static/js/main.afe6d4af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3201c72.css",
+    "static/js/main.afe6d4af.js"
+  ]
+}
