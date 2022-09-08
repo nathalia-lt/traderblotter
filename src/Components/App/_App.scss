@@ -9,25 +9,31 @@
 .light {
   filter: invert(100%);
 
-    img {
-      filter: invert(100%) !important;
-    }
+  img {
+    filter: invert(100%) !important;
+  }
 }
 
-h1{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+h1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 35px;
-  
+
 }
 
-.title{
+.title {
   display: flex;
   flex-direction: row;
   align-content: center;
+  width: 25%;
 
-  img{
+  img {
     height: 35px;
-    margin-top: 10%;
+    margin-top: 7.5%;
+    margin-left: 5%;
+
+    &.light {
+      filter: invert(100%) !important;
+    }
   }
 }
 
@@ -41,15 +47,15 @@ h1{
   align-items: center;
   padding-top: 1.5%;
 
-  &.light{
+  &.light {
     background-color: black;
     filter: invert(0%) !important;
 
   }
 }
 
-.toggle{
-  &.light{
+.toggle {
+  &.light {
     filter: invert(100%) !important;
   }
 }
@@ -57,11 +63,12 @@ h1{
 .toggle.react-toggle--checked .react-toggle-track {
   background-color: white;
 }
+
 .toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
   background-color: lightgoldenrodyellow;
 }
 
-.react-toggle--checked .react-toggle-thumb{
+.react-toggle--checked .react-toggle-thumb {
   border-color: rgb(158, 157, 157) !important;
 }
 
@@ -81,6 +88,10 @@ h1{
   img {
     cursor: pointer;
     height: 40px; //make icons smaller
-    // filter: invert(0%) !important;
+
+    &.light {
+
+      filter: invert(100%) !important;
+    }
   }
 }

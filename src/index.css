@@ -20,10 +20,15 @@ h1 {
   display: flex;
   flex-direction: row;
   align-content: center;
+  width: 25%;
 }
 .title img {
   height: 35px;
-  margin-top: 10%;
+  margin-top: 7.5%;
+  margin-left: 5%;
+}
+.title img.light {
+  filter: invert(100%) !important;
 }
 
 .allCurrencies {
@@ -71,6 +76,9 @@ h1 {
 .icons img {
   cursor: pointer;
   height: 40px;
+}
+.icons img.light {
+  filter: invert(100%) !important;
 }
 
 .mainDisplayContainer {

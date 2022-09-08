@@ -44,13 +44,14 @@ function App() {
 
   let [lightModeOn, setLightModeOn] = useState(false)
 
-  function handleToggleChange(){
+  function handleToggleChange() {
     setLightModeOn(!lightModeOn)
   }
 
-  let toggleText = (lightModeOn ? 'light':'')
+  let toggleText = (lightModeOn ? 'light' : '')
+  let toggleTextAlt = (lightModeOn ? '' : 'light' )
 
-  let appClass = 'app ' + toggleText
+    let appClass = 'app ' + toggleText
 
   let toggleClass = 'toggle ' + toggleText
 
@@ -62,13 +63,13 @@ function App() {
           icons={false}
           className={toggleClass}
           onChange={handleToggleChange} />
-          <div className='title' >
-        <h1>Trader Blotter </h1>
-        <img src="https://img.icons8.com/ios/500/000000/graph--v1.png" alt=''/>
-          </div>
+        <div className='title' >
+          <h1>Trader Blotter </h1>
+          <img className={toggleTextAlt} src="https://img.icons8.com/ios/500/000000/graph--v1.png" alt='' />
+        </div>
         <div className='icons' >
-          <img className={toggleText} src={github} onClick={handleGitHubClick} alt=''/>
-          <img className={toggleText} src={linkedin} onClick={handleLinkedinClick} alt='' />
+          <img className={toggleTextAlt} src={github} onClick={handleGitHubClick} alt='' />
+          <img src={linkedin} onClick={handleLinkedinClick} alt='' />
         </div>
       </div>
       <div className={'allCurrencies ' + toggleText} >
