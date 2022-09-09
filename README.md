@@ -2,12 +2,12 @@
 
 An app where you can buy or sell foreign currency in real time.
 
-* User can check the highest and lowest stock price of the day
-* When you click either buy or sell the transaction goes to the trasaction display
-* User can check the crurrency flactuation in real time
-* Integrated Newscatcher API to display world News
+* Watch exchange rates fluctuate in real time
+* Learn about the highest and lowest rates of the day
+* Perform buy/sell transactions on demand
+* Integrated Newscatcher API to display the latest news from around the world
 
-* Obs: This app uses foreign currency fake data.
+* NOTE: This app uses foreign currency fake data.
 
 **Try it out here:**  [Trader Blotter](https://nathalia-lt.github.io/traderblotter/)
 
