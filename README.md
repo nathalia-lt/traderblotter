@@ -1,10 +1,13 @@
-# <img src='traderblotterpic.png' width='400px' /> 
+# <img src='traderblottertitle.png' width='400px' /> 
 
 An app where you can buy or sell foreign currency in real time.
 
-* User can check the highest and lowest price for the day
+* User can check the highest and lowest stock price of the day
 * When you click either buy or sell the transaction goes to the trasaction display
 * User can check the crurrency flactuation in real time
+* Integrated Newscatcher API to display world News
+
+* Obs: This app uses foreign currency fake data.
 
 **Try it out here:**  [Trader Blotter](https://nathalia-lt.github.io/traderblotter/)
 
@@ -16,16 +19,16 @@ An app where you can buy or sell foreign currency in real time.
 
 
 # Demo:
- <!-- <img src='eventhunter.gif' width='' /> -->
+ <img src='traderblottergif.gif' width='' />
 
 
  #
 
  ## Technical Accomplishments 
-<!-- 
-* Implemented TicketMaster API to fetch and display event data. 
+
+* Implemented Newscatcher API to fetch and display News data. 
 * Designed and created interactive user interface with React and SCSS.
-* Deployed with ability to user to save favorites. -->
+
 
 
 
